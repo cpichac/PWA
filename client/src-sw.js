@@ -75,6 +75,6 @@ registerRoute(
   })
 );
 
-// You can add more routes for other types of assets as needed
+
 
 

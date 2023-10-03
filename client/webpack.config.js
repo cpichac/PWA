@@ -22,6 +22,8 @@ module.exports = () => {
         name: 'Your App Name',
         short_name: 'App',
         description: 'Description of your app',
+        start_url: "/",
+        display: "standalone",
         background_color: '#ffffff',
         theme_color: '#000000',
         icons: [
