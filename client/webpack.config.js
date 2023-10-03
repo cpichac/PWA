@@ -19,10 +19,11 @@ module.exports = () => {
         template: './index.html', // Specify your HTML template
       }),
       new WebpackPwaManifest({
-        name: 'Your App Name',
-        short_name: 'App',
-        description: 'Description of your app',
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E.',
+        description: 'takes notes with javascript highlight',
         start_url: "/",
+        orientation: "portrait",
         display: "standalone",
         background_color: '#ffffff',
         theme_color: '#000000',
