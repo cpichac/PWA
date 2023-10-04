@@ -31,12 +31,12 @@
       "type": "image/png"
     }
   ],
-  "name": "Your App Name",
-  "short_name": "App",
+  "name": "Just Another Text Editor",
+  "short_name": "J.A.T.E.",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "/",
-  "description": "Description of your app",
+  "description": "takes notes with javascript highlight",
   "background_color": "#ffffff",
   "theme_color": "#000000"
 }

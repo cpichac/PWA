@@ -13,15 +13,14 @@ const initdb = async () =>
   });
 
 // Initialize the database
-const dbPromise = initdb();
 
 // Method to add content to the database
 export const putDb = async (content) => {
   try {
-    const db = await dbPromise;
+    const db = await openDB('jate', 1);
     const tx = db.transaction('jate', 'readwrite');
     const store = tx.objectStore('jate');
-    const id = await store.add(content);
+    const id = await store.put({id:1, content});
     await tx.done;
     console.log(`Added content with ID: ${id}`);
   } catch (error) {
@@ -32,12 +31,13 @@ export const putDb = async (content) => {
 // Method to get all content from the database
 export const getDb = async () => {
   try {
-    const db = await dbPromise;
+    console.log('Post to the database');
+    const db = await openDB('jate', 1);
     const tx = db.transaction('jate', 'readonly');
     const store = tx.objectStore('jate');
     const allContent = await store.getAll();
     await tx.done;
-    return allContent;
+    return result?.value
   } catch (error) {
     console.error('Error getting content from the database:', error);
     return [];
